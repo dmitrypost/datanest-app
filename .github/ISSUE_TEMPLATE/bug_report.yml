@@ -1,0 +1,52 @@
+name: Bug report
+description: Something in DataNest does not work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time. Please leave out passwords, connection strings with secrets, and data you cannot share.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what DataNest did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Connect to ...
+        2. Run ...
+        3. See ...
+  - type: dropdown
+    id: host
+    attributes:
+      label: Where you use DataNest
+      options:
+        - VS Code extension
+        - Desktop app
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: DataNest version
+      description: In VS Code, the version on the extension's page; in the desktop app, About and help.
+  - type: input
+    id: system
+    attributes:
+      label: Operating system
+      placeholder: Windows 11, macOS 15 on Apple silicon, Ubuntu 24.04, ...
+  - type: input
+    id: database
+    attributes:
+      label: Database and version
+      placeholder: PostgreSQL 16, SQL Server 2022, ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Logs and diagnostics in DataNest shows the engine's messages; paste what looks related.

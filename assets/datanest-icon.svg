@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
+ <title id="title">DataNest app icon</title>
+ <desc id="desc">Three luminous nested arcs cradle connected data nodes in a midnight-blue rounded square.</desc>
+ <defs>
+ <linearGradient id="nestGrad" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#56F0D2"/><stop offset="0.47" stop-color="#4CB7FF"/><stop offset="1" stop-color="#9A7CFF"/>
+ </linearGradient>
+ <linearGradient id="innerGrad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#36C7BE"/><stop offset="1" stop-color="#6A88FF"/>
+ </linearGradient>
+ <linearGradient id="tileGrad" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#172942"/><stop offset="1" stop-color="#0B152B"/>
+ </linearGradient>
+ <radialGradient id="halo" cx="0.48" cy="0.38" r="0.70">
+  <stop stop-color="#2A4975" stop-opacity=".5"/><stop offset="1" stop-color="#111D35" stop-opacity="0"/>
+ </radialGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+  <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000815" flood-opacity=".32"/>
+ </filter>
+ <filter id="softglow" x="-60%" y="-60%" width="220%" height="220%">
+  <feGaussianBlur stdDeviation="6"/>
+ </filter>
+ </defs>
+ <rect x="3" y="3" width="186" height="186" rx="43" fill="url(#tileGrad)"/>
+ <rect x="3" y="3" width="186" height="186" rx="43" fill="url(#halo)"/>
+ <rect x="3.75" y="3.75" width="184.5" height="184.5" rx="42.25" fill="none" stroke="#355176" stroke-opacity=".58" stroke-width="1.5"/>
+ <!-- Nested storage arcs: a data nest drawn as three concentric layers -->
+ <path d="M32 83 C36 124 58 153 96 153 C134 153 156 124 160 83" fill="none" stroke="#3CA5FF" stroke-opacity=".14" stroke-width="19" stroke-linecap="round" filter="url(#softglow)"/>
+ <path d="M32 83 C36 124 58 153 96 153 C134 153 156 124 160 83" fill="none" stroke="url(#nestGrad)" stroke-width="10.5" stroke-linecap="round"/>
+ <path d="M52 89 C54 119 69 136 96 136 C123 136 138 119 140 89" fill="none" stroke="#1E3755" stroke-width="14" stroke-linecap="round"/>
+ <path d="M52 89 C54 119 69 136 96 136 C123 136 138 119 140 89" fill="none" stroke="url(#innerGrad)" stroke-width="8.7" stroke-linecap="round"/>
+ <path d="M73 98 C74 113 81 118 96 118 C111 118 118 113 119 98" fill="none" stroke="#0F233D" stroke-width="12" stroke-linecap="round"/>
+ <path d="M73 98 C74 113 81 118 96 118 C111 118 118 113 119 98" fill="none" stroke="url(#nestGrad)" stroke-width="7" stroke-linecap="round"/>
+ <!-- Connected data nodes live within the nest -->
+ <path d="M69 62 L96 47 L123 62" stroke="#6AA7DF" stroke-opacity=".60" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M69 62 L69 80 M123 62 L123 80 M96 47 L96 86" stroke="#6AA7DF" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+ <circle cx="69" cy="62" r="9" fill="#1A3957"/>
+ <circle cx="123" cy="62" r="9" fill="#1A3957"/>
+ <circle cx="96" cy="47" r="12" fill="#16374A"/>
+ <circle cx="69" cy="62" r="5.6" fill="#51E5CD"/>
+ <circle cx="123" cy="62" r="5.6" fill="#8C86FF"/>
+ <circle cx="96" cy="47" r="7.5" fill="#6DEFE0"/>
+ <circle cx="96" cy="47" r="2.6" fill="#F2FFFF" opacity=".9"/>
+
+</svg>

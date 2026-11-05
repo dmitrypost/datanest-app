@@ -1,0 +1,16 @@
+name: Idea or feature request
+description: Something DataNest could do, or do better.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What you would like
+      description: What you are trying to do, and what would make it easier.
+    validations:
+      required: true
+  - type: input
+    id: database
+    attributes:
+      label: Database, if it is about one
+      placeholder: PostgreSQL, MySQL, SQL Server, ...

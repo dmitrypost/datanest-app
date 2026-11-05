@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DataNest: one workbench for every database</title>
+    <meta name="description" content="DataNest is a database workbench for PostgreSQL, MySQL, MariaDB, SQLite, SQL Server, Oracle, DuckDB, MongoDB and more, in VS Code or as a desktop app for Windows, macOS and Linux. Free to use, in preview." />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#070d1a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7fafe" media="(prefers-color-scheme: light)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DataNest: one workbench for every database" />
+    <meta property="og:description" content="SQL that knows your schema, a grid built for real data, ER diagrams, migrations and server tools, in VS Code or on the desktop." />
+    <meta property="og:url" content="https://dmitrypost.github.io/datanest-app/" />
+    <meta property="og:image" content="https://dmitrypost.github.io/datanest-app/screens/query-results-dark.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/datanest-icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/datanest-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="assets/datanest-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to the content</a>
+
+    <header class="top">
+      <div class="wrap top__bar">
+        <a class="brand" href="./" aria-label="DataNest home">
+          <picture>
+            <source srcset="assets/datanest-logo-light.svg" media="(prefers-color-scheme: light)" />
+            <img src="assets/datanest-logo-dark.svg" alt="DataNest" width="176" height="46" />
+          </picture>
+        </a>
+        <nav class="top__nav" aria-label="Sections">
+          <a href="#features">Features</a>
+          <a href="#databases">Databases</a>
+          <a href="#download">Download</a>
+          <a href="https://github.com/dmitrypost/datanest-app/issues">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero__text">
+          <p class="eyebrow"><span class="pill">Preview</span> Free to use</p>
+          <h1>One workbench for every database you work with</h1>
+          <p class="lede">
+            DataNest connects to PostgreSQL, MySQL, SQL Server, Oracle, SQLite, DuckDB, MongoDB and more, with SQL that knows
+            your schema, a results grid built for real data, ER diagrams, schema migrations and server tools. Use it inside
+            VS Code, or as a desktop app on Windows, macOS and Linux.
+          </p>
+          <div class="actions">
+            <a class="button button--primary" href="#download-vscode">Get it for VS Code</a>
+            <a class="button" href="#download-desktop">Download the desktop app</a>
+          </div>
+        </div>
+        <div class="wrap">
+          <figure class="shot shot--hero">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/query-results-light-1440.webp 1440w, screens/query-results-light.webp 2880w" sizes="(min-width: 1240px) 1200px, 96vw" />
+              <source type="image/webp" srcset="screens/query-results-dark-1440.webp 1440w, screens/query-results-dark.webp 2880w" sizes="(min-width: 1240px) 1200px, 96vw" />
+              <img src="screens/query-results-dark.png" width="1600" height="1000" alt="The DataNest workbench: the explorer with a PostgreSQL database's tables, a query joining orders and customers, and its 48 rows in the results grid" />
+            </picture>
+          </figure>
+        </div>
+      </section>
+
+      <section id="databases" class="band">
+        <div class="wrap">
+          <h2 class="band__title">Speaks the databases you run</h2>
+          <ul class="chips" aria-label="Supported databases">
+            <li>PostgreSQL</li>
+            <li>PostGIS</li>
+            <li>MySQL</li>
+            <li>MariaDB</li>
+            <li>SQLite</li>
+            <li>SQL Server</li>
+            <li>Oracle</li>
+            <li>DuckDB</li>
+            <li>MongoDB</li>
+            <li>CockroachDB</li>
+            <li>YugabyteDB</li>
+            <li>Amazon Redshift</li>
+          </ul>
+          <p class="band__note">One engine underneath, written in Rust, so every database gets the same editor, grid and tools.</p>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="wrap feature">
+          <div class="feature__text">
+            <h2>SQL that knows your schema</h2>
+            <p>
+              Completion of tables, columns and functions comes from the database you are connected to, with their types.
+              Diagnostics appear as you type, the formatter tidies a script in one keystroke, and Explain shows how any
+              statement will run.
+            </p>
+            <ul class="ticks">
+              <li>Run the statement under the cursor with Ctrl+Enter</li>
+              <li>History, saved queries and snippets for every connection</li>
+              <li>Transactions, savepoints and isolation levels at hand</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/completion-light-1440.webp 1440w, screens/completion-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/completion-dark-1440.webp 1440w, screens/completion-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/completion-dark.png" width="1600" height="1000" loading="lazy" alt="The SQL editor completing the columns of the orders table, each with its type" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap feature feature--flip">
+          <div class="feature__text">
+            <h2>Results you can work with</h2>
+            <p>
+              Sort and filter on the server, page through large results, and edit cells with every change staged and its
+              SQL shown before anything is committed. Follow foreign keys, edit JSON, group and pivot, and compare two
+              results side by side.
+            </p>
+            <ul class="ticks">
+              <li>Import and export CSV, JSON, Excel, Arrow and Parquet</li>
+              <li>Copy tables from one database to another</li>
+              <li>Charts, dashboards and alerts over your queries</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/results-light-1440.webp 1440w, screens/results-light.webp 2268w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/results-dark-1440.webp 1440w, screens/results-dark.webp 2268w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/results-dark.png" width="1600" height="731" loading="lazy" alt="A results grid of recent orders with customers, emails, dates, item counts and totals" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap feature">
+          <div class="feature__text">
+            <h2>See the shape of your data</h2>
+            <p>
+              Draw an ER diagram of a schema with its foreign keys, and the relationships DataNest infers from names,
+              types and data where no constraint says so. Compare two schemas, plan a migration with its risky steps
+              flagged, and design tables with the SQL previewed before it runs.
+            </p>
+            <ul class="ticks">
+              <li>Hierarchical, force-directed and manual layouts</li>
+              <li>Impact analysis before you change a table</li>
+              <li>Export diagrams as images</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/er-diagram-light-1440.webp 1440w, screens/er-diagram-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/er-diagram-dark-1440.webp 1440w, screens/er-diagram-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/er-diagram-dark.png" width="1600" height="1000" loading="lazy" alt="An ER diagram of a shop schema: users, customers, orders, order items, products and shipments, joined by declared and inferred relationships" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap feature feature--flip">
+          <div class="feature__text">
+            <h2>Know what your server is doing</h2>
+            <p>
+              Sessions and running queries, who blocks whom as a graph, query statistics and execution plans, index advice,
+              bloat and vacuum, replication, users and roles, backups, server logs and sizes, where the database offers
+              them.
+            </p>
+            <ul class="ticks">
+              <li>Cancel a query or end a session, with the SQL shown first</li>
+              <li>Live panels that refresh on their own</li>
+              <li>Query baselines that flag a regression</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/locks-light-1440.webp 1440w, screens/locks-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/locks-dark-1440.webp 1440w, screens/locks-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/locks-dark.png" width="1600" height="1000" loading="lazy" alt="The lock graph of a PostgreSQL server: one session idle in a transaction blocks a second, which blocks a third" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap">
+          <ul class="cards" aria-label="More of DataNest">
+            <li class="card">
+              <h3>AI, on your terms</h3>
+              <p>DataNest is an MCP server: give Claude, Cursor, Copilot in VS Code or another assistant access to your connections, choose what it may read or change, approve what it runs, and keep a record of every call.</p>
+            </li>
+            <li class="card">
+              <h3>Automation</h3>
+              <p>Macros, scheduled jobs whose steps wait for each other, and a headless runner for CI, such as a check for schema drift.</p>
+            </li>
+            <li class="card">
+              <h3>Spatial data</h3>
+              <p>PostGIS geometries on a map, spatial queries and filters, and diagnostics for invalid shapes.</p>
+            </li>
+            <li class="card">
+              <h3>Inside SQLite</h3>
+              <p>Pages, the write-ahead log and integrity checks of a SQLite file, with a hex view down to the byte.</p>
+            </li>
+            <li class="card">
+              <h3>Curated plugins</h3>
+              <p>Signed plugins from a reviewed catalog, each with the permissions it asks for shown before you install it.</p>
+            </li>
+            <li class="card">
+              <h3>Private by default</h3>
+              <p>Connections stay on your machine and their passwords in a secret store. No telemetry unless you turn it on.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="download" class="download">
+        <div class="wrap">
+          <h2>Get DataNest</h2>
+          <p class="download__release" data-release-status aria-live="polite">Looking up the latest release…</p>
+
+          <div class="downloads">
+            <article id="download-vscode" class="download-card download-card--wide">
+              <h3>VS Code extension</h3>
+              <p>Everything inside the editor: native views and commands, with the workbench in editor tabs. The database engine ships in the extension, so there is nothing else to install.</p>
+              <div class="download-card__links" data-store-links>
+                <a class="button button--primary" href="https://marketplace.visualstudio.com/items?itemName=datanest.datanest" data-store="marketplace">Visual Studio Marketplace</a>
+                <a class="button" href="https://open-vsx.org/extension/datanest/datanest" data-store="openvsx">Open VSX</a>
+              </div>
+              <p class="download-card__note" data-store-note hidden>On the Visual Studio Marketplace and Open VSX soon; until then, install the <code>.vsix</code> for your platform from the latest release with <strong>Extensions: Install from VSIX…</strong>.</p>
+              <ul class="assets" data-assets="vsix" aria-label="VS Code extension packages"></ul>
+              <p class="download-card__fine">Windows x64, macOS (Apple silicon and Intel), Linux x64. Open VSX serves VSCodium, Cursor and other editors built on VS Code.</p>
+            </article>
+
+            <article id="download-desktop" class="download-card">
+              <h3>Windows</h3>
+              <p>The desktop app, with the engine built in.</p>
+              <ul class="assets" data-assets="windows" aria-label="Windows installers"></ul>
+              <p class="download-card__fine">Windows 10 and 11, x64.</p>
+            </article>
+
+            <article class="download-card">
+              <h3>macOS</h3>
+              <p>One disk image for Apple silicon and Intel Macs.</p>
+              <ul class="assets" data-assets="macos" aria-label="macOS disk image"></ul>
+              <p class="download-card__fine">Apple silicon and Intel.</p>
+            </article>
+
+            <article class="download-card">
+              <h3>Linux</h3>
+              <p>Packages for Debian and Ubuntu, and for Fedora and openSUSE.</p>
+              <ul class="assets" data-assets="linux" aria-label="Linux packages"></ul>
+              <p class="download-card__fine">x64, with WebKitGTK 4.1.</p>
+            </article>
+          </div>
+
+          <p class="unsigned">
+            The preview builds are not code-signed yet: Windows and macOS ask before opening them, and Windows with Smart
+            App Control on will not run them until they are.
+          </p>
+
+          <h3 class="later__title">Coming later</h3>
+          <ul class="later">
+            <li><strong>iPhone and iPad</strong> A companion that connects to DataNest on your computer</li>
+            <li><strong>Command line and MCP server</strong> On their own, for CI and AI assistants</li>
+            <li><strong>Browser</strong> The workbench in a browser tab, through a local connector</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot__row">
+        <p>© 2026 Dmitry Post. DataNest is free to use; see the <a href="https://github.com/dmitrypost/datanest-app/blob/main/LICENSE.md">license</a>.</p>
+        <p><a href="https://github.com/dmitrypost/datanest-app/issues">Report a bug or ask for a feature</a> · <a href="https://github.com/dmitrypost/datanest-app/releases">All releases</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
