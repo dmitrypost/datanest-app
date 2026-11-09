@@ -183,8 +183,7 @@
             <h2>See the shape of your data</h2>
             <p>
               Draw an ER diagram of a schema with its foreign keys, and the relationships DataNest infers from names,
-              types and data where no constraint says so. Compare two schemas, plan a migration with its risky steps
-              flagged, and design tables with the SQL previewed before it runs.
+              types and data where no constraint says so. Design tables with the SQL previewed before it runs.
             </p>
             <ul class="ticks">
               <li>Hierarchical, force-directed and manual layouts</li>
@@ -202,6 +201,29 @@
         </div>
 
         <div class="wrap feature feature--flip">
+          <div class="feature__text">
+            <h2>Change schemas safely</h2>
+            <p>
+              Compare a database with a snapshot kept in your repository, a branch's checkout or another database. Every
+              difference is listed, with the incompatible ones flagged, and the migration plan shows each statement with
+              the locks it takes and the data it could destroy before you apply it.
+            </p>
+            <ul class="ticks">
+              <li>Renames detected, not dropped and re-created</li>
+              <li>Try a migration in a sandbox first</li>
+              <li>History and rollback of every migration</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/schema-compare-light-1440.webp 1440w, screens/schema-compare-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/schema-compare-dark-1440.webp 1440w, screens/schema-compare-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/schema-compare-dark.png" width="1600" height="1000" loading="lazy" alt="A database compared with a schema snapshot: a table, a column and an index added, a column removed, and a column whose type narrows flagged as incompatible, with its properties before and after" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap feature">
           <div class="feature__text">
             <h2>Know what your server is doing</h2>
             <p>
@@ -224,7 +246,7 @@
           </figure>
         </div>
 
-        <div class="wrap feature">
+        <div class="wrap feature feature--flip">
           <div class="feature__text">
             <h2>AI, on your terms</h2>
             <p>
