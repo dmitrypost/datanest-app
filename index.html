@@ -113,6 +113,28 @@
 
         <div class="wrap feature feature--flip">
           <div class="feature__text">
+            <h2>See how a query runs</h2>
+            <p>
+              Explain shows the plan as text, a tree or a graph. Explain Analyze runs the statement, rolls it back and
+              shows where the time went and which row estimates were off, so you know which step to fix first.
+            </p>
+            <ul class="ticks">
+              <li>Row-estimate accuracy, with the likely causes</li>
+              <li>Buffers, reads from disk and the slowest steps</li>
+              <li>Compare two plans node by node</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/plan-light-1440.webp 1440w, screens/plan-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/plan-dark-1440.webp 1440w, screens/plan-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/plan-dark.png" width="1600" height="1000" loading="lazy" alt="The measured plan of an orders report: the row-estimate accuracy and the buffers and timing summaries over the plan tree, where a hash join returns 12 times the rows estimated and a scan of order items reads 2,080 blocks from disk" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap feature">
+          <div class="feature__text">
             <h2>Results you can work with</h2>
             <p>
               Sort and filter on the server, page through large results, and edit cells with every change staged and its
@@ -126,14 +148,14 @@
           </div>
           <figure class="shot">
             <picture>
-              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/results-light-1440.webp 1440w, screens/results-light.webp 2268w" sizes="(min-width: 1240px) 680px, 96vw" />
-              <source type="image/webp" srcset="screens/results-dark-1440.webp 1440w, screens/results-dark.webp 2268w" sizes="(min-width: 1240px) 680px, 96vw" />
-              <img src="screens/results-dark.png" width="1600" height="731" loading="lazy" alt="A results grid of recent orders with customers, emails, dates, item counts and totals" />
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/edits-light-1440.webp 1440w, screens/edits-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/edits-dark-1440.webp 1440w, screens/edits-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/edits-dark.png" width="1600" height="1000" loading="lazy" alt="The review of three staged edits to a customers table: a changed tier, a corrected email and a deleted row, each with its before and after, and the statements that will run in one transaction" />
             </picture>
           </figure>
         </div>
 
-        <div class="wrap feature">
+        <div class="wrap feature feature--flip">
           <div class="feature__text">
             <h2>Dashboards over your queries</h2>
             <p>
@@ -156,7 +178,7 @@
           </figure>
         </div>
 
-        <div class="wrap feature feature--flip">
+        <div class="wrap feature">
           <div class="feature__text">
             <h2>See the shape of your data</h2>
             <p>
@@ -179,7 +201,7 @@
           </figure>
         </div>
 
-        <div class="wrap feature">
+        <div class="wrap feature feature--flip">
           <div class="feature__text">
             <h2>Know what your server is doing</h2>
             <p>
@@ -202,12 +224,31 @@
           </figure>
         </div>
 
+        <div class="wrap feature">
+          <div class="feature__text">
+            <h2>AI, on your terms</h2>
+            <p>
+              DataNest is an MCP server: give Claude, Cursor, Copilot in VS Code or another assistant your connections and
+              choose, per connection, what it may read or change. A change it proposes waits for you, with the exact
+              statement, its risk and what it touches, and runs only once you approve it.
+            </p>
+            <ul class="ticks">
+              <li>Sensitive columns kept out of what it reads</li>
+              <li>No writes to a production connection, ever</li>
+              <li>A transcript of every call</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/ai-approval-light-1440.webp 1440w, screens/ai-approval-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/ai-approval-dark-1440.webp 1440w, screens/ai-approval-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/ai-approval-dark.png" width="1600" height="1000" loading="lazy" alt="An AI assistant's proposal waiting for approval: an index on order items, with the exact statement, its hash, a medium risk because it may run for a long time, and the one change to the schema" />
+            </picture>
+          </figure>
+        </div>
+
         <div class="wrap">
           <ul class="cards" aria-label="More of DataNest">
-            <li class="card">
-              <h3>AI, on your terms</h3>
-              <p>DataNest is an MCP server: give Claude, Cursor, Copilot in VS Code or another assistant access to your connections, choose what it may read or change, approve what it runs, and keep a record of every call.</p>
-            </li>
             <li class="card">
               <h3>Automation</h3>
               <p>Macros, scheduled jobs whose steps wait for each other, and a headless runner for CI, such as a check for schema drift.</p>
