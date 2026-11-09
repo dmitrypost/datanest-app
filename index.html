@@ -270,7 +270,46 @@
         </div>
 
         <div class="wrap">
-          <ul class="cards" aria-label="More of DataNest">
+          <h2 class="gallery__title">More of DataNest</h2>
+          <ul class="gallery" aria-label="More of DataNest, in pictures">
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/compare-light-1440.webp 1440w, screens/compare-light.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/compare-dark-1440.webp 1440w, screens/compare-dark.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/compare-dark.png" width="1600" height="1000" loading="lazy" alt="Products in production and in staging compared: two prices and a stock level changed, each row shown before and after, one product removed and one added" />
+                </picture>
+              </figure>
+              <h3>Compare data</h3>
+              <p>Compare two tables or two queries row by row, across schemas or databases: what was added, removed or changed, each changed row as it was and as it is. Then sync the differences, with the SQL shown first.</p>
+            </li>
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/advisor-light-1440.webp 1440w, screens/advisor-light.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/advisor-dark-1440.webp 1440w, screens/advisor-dark.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/advisor-dark.png" width="1600" height="1000" loading="lazy" alt="The index advisor suggesting an index on order items by order: the slow statement that needs it, called 48,210 times, the table's size, what is uncertain, and the CREATE INDEX CONCURRENTLY it would run" />
+                </picture>
+              </figure>
+              <h3>Index advice with evidence</h3>
+              <p>The advisor reads pg_stat_statements, table sizes and index usage, suggests the indexes your slowest statements need and finds duplicate and unused ones, each with its evidence, its uncertainty and the statement it would run.</p>
+            </li>
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/designer-light-1440.webp 1440w, screens/designer-light.webp 1900w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/designer-dark-1440.webp 1440w, screens/designer-dark.webp 1900w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/designer-dark.png" width="1600" height="1000" loading="lazy" alt="An ER diagram in design mode: a new status column on orders, and beside it the change's risk, its lock, its warnings and the ALTER TABLE statement" />
+                </picture>
+              </figure>
+              <h3>Design on the diagram</h3>
+              <p>Add tables, columns and keys on the ER diagram. Every change shows its risk, the locks it takes and its SQL, and nothing runs until you review and apply it.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrap">
+          <ul class="cards" aria-label="And more">
             <li class="card">
               <h3>Automation</h3>
               <p>Macros, scheduled jobs whose steps wait for each other, and a headless runner for CI, such as a check for schema drift.</p>
