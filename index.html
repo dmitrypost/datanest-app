@@ -229,7 +229,8 @@
             <p>
               Sessions and running queries, who blocks whom as a graph, query statistics and execution plans, index advice,
               bloat and vacuum, replication, users and roles, backups, server logs and sizes, where the database offers
-              them.
+              them: PostgreSQL's in depth, and SQL Server's deadlocks and Agent jobs, MySQL's InnoDB, Oracle's scheduler and
+              MongoDB's sharding too.
             </p>
             <ul class="ticks">
               <li>Cancel a query or end a session, with the SQL shown first</li>
@@ -337,6 +338,45 @@
               </figure>
               <h3>Every tool beside its connection</h3>
               <p>A PostgreSQL connection lists its tools in the side bar, fourteen here. The activity view shows connection use and every session live, here two idle in a transaction for minutes.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrap">
+          <h2 class="gallery__title">Tools for every database</h2>
+          <ul class="gallery" aria-label="Tools for every database, in pictures">
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/mssql-deadlocks-light-1440.webp 1440w, screens/mssql-deadlocks-light.webp 1920w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/mssql-deadlocks-dark-1440.webp 1440w, screens/mssql-deadlocks-dark.webp 1920w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/mssql-deadlocks-dark.png" width="1600" height="1000" loading="lazy" alt="SQL Server's server activity on its Deadlocks tab: four deadlocks between the billing API and the payment reconciler, each with the session the server chose as its victim, the lock each waited for and its statement" />
+                </picture>
+              </figure>
+              <h3>SQL Server, down to its deadlocks</h3>
+              <p>Sessions, locks, statements, Agent jobs, availability groups, index advice and the deadlocks the server recorded, each with its victim and the statements caught in it.</p>
+            </li>
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/mongodb-pipeline-light-1440.webp 1440w, screens/mongodb-pipeline-light.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/mongodb-pipeline-dark-1440.webp 1440w, screens/mongodb-pipeline-dark.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/mongodb-pipeline-dark.png" width="1600" height="1000" loading="lazy" alt="A MongoDB aggregation pipeline in four stages, match, group by category, round and sort, with the output of the whole pipeline beside it" />
+                </picture>
+              </figure>
+              <h3>MongoDB pipelines, stage by stage</h3>
+              <p>Build an aggregation pipeline a stage at a time, switch stages on and off, and see each stage's output before you open the whole pipeline in the editor.</p>
+            </li>
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/oracle-jobs-light-1440.webp 1440w, screens/oracle-jobs-light.webp 1920w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/oracle-jobs-dark-1440.webp 1440w, screens/oracle-jobs-dark.webp 1920w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/oracle-jobs-dark.png" width="1600" height="1000" loading="lazy" alt="The jobs of an Oracle scheduler: a rate import running now, a bank reconciliation retrying, an audit purge that failed and the rest succeeded, each with its last and next run and its schedule in words" />
+                </picture>
+              </figure>
+              <h3>Oracle's scheduler at a glance</h3>
+              <p>Every job with how it last ran, when it runs next and its schedule in words. The same views read MySQL's events and SQL Server Agent, with replication and sharding where the database has them.</p>
             </li>
           </ul>
         </div>
