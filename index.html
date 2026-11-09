@@ -305,6 +305,28 @@
               <h3>Design on the diagram</h3>
               <p>Add tables, columns and keys on the ER diagram. Every change shows its risk, the locks it takes and its SQL, and nothing runs until you review and apply it.</p>
             </li>
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/migration-light-1440.webp 1440w, screens/migration-light.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/migration-dark-1440.webp 1440w, screens/migration-dark.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/migration-dark.png" width="1600" height="1000" loading="lazy" alt="The steps of a migration plan: dropping a column destroys data and is irreversible, narrowing a column may block and rewrites the table, and creating a table or a column is safe and can be undone, each with the lock it takes" />
+                </picture>
+              </figure>
+              <h3>A migration, step by step</h3>
+              <p>Each step of a plan says what it risks, the lock it takes and whether it can be undone, above the forward and rollback SQL that will run.</p>
+            </li>
+            <li class="gallery-card">
+              <figure class="shot">
+                <picture>
+                  <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/pg-tools-light-1440.webp 1440w, screens/pg-tools-light.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <source type="image/webp" srcset="screens/pg-tools-dark-1440.webp 1440w, screens/pg-tools-dark.webp 2200w" sizes="(min-width: 1240px) 380px, (min-width: 56rem) 46vw, 96vw" />
+                  <img src="screens/pg-tools-dark.png" width="1600" height="1000" loading="lazy" alt="The fourteen tools of a PostgreSQL connection listed beside its live activity: connections in use, and six sessions, two idle in a transaction for minutes and two waiting on a lock" />
+                </picture>
+              </figure>
+              <h3>Every tool beside its connection</h3>
+              <p>A PostgreSQL connection lists its tools in the side bar, fourteen here. The activity view shows connection use and every session live, here two idle in a transaction for minutes.</p>
+            </li>
           </ul>
         </div>
 
