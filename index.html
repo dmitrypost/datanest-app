@@ -122,7 +122,6 @@
             <ul class="ticks">
               <li>Import and export CSV, JSON, Excel, Arrow and Parquet</li>
               <li>Copy tables from one database to another</li>
-              <li>Charts, dashboards and alerts over your queries</li>
             </ul>
           </div>
           <figure class="shot">
@@ -135,6 +134,29 @@
         </div>
 
         <div class="wrap feature">
+          <div class="feature__text">
+            <h2>Dashboards over your queries</h2>
+            <p>
+              Turn any query into a widget: a line or bar chart, a gauge with warning and critical marks, a single number
+              or a table, laid out on a grid and refreshed by hand or on a timer. A dashboard is a JSON file in your
+              workspace that names its connection but never its host or password, so you can commit it with your SQL.
+            </p>
+            <ul class="ticks">
+              <li>Alert rules with thresholds, started from templates</li>
+              <li>Notifications on screen, by email, webhook, Slack or Teams</li>
+              <li>A PostgreSQL monitoring dashboard in one step</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" media="(prefers-color-scheme: light)" srcset="screens/dashboard-light-1440.webp 1440w, screens/dashboard-light.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <source type="image/webp" srcset="screens/dashboard-dark-1440.webp 1440w, screens/dashboard-dark.webp 2880w" sizes="(min-width: 1240px) 680px, 96vw" />
+              <img src="screens/dashboard-dark.png" width="1600" height="1222" loading="lazy" alt="A store dashboard: revenue, orders and average order today, revenue per day for web and store as a line chart, connections in use on a gauge, orders by category as a bar chart and the top customers as a table" />
+            </picture>
+          </figure>
+        </div>
+
+        <div class="wrap feature feature--flip">
           <div class="feature__text">
             <h2>See the shape of your data</h2>
             <p>
@@ -157,7 +179,7 @@
           </figure>
         </div>
 
-        <div class="wrap feature feature--flip">
+        <div class="wrap feature">
           <div class="feature__text">
             <h2>Know what your server is doing</h2>
             <p>
